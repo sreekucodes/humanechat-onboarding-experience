@@ -20,7 +20,7 @@ const OnboardingContent = () => {
           <div className="relative mb-8">
             <div className="aspect-video bg-app-gray rounded-md overflow-hidden">
               <img 
-                src="/lovable-uploads/0bfe73c8-ec24-470f-9127-cce9ac8a83da.png" 
+                src="/lovable-uploads/17c78ebc-431d-42f4-a7c8-563f0f7baed9.png" 
                 alt="Settings screenshot" 
                 className="w-full object-cover transition-opacity duration-300"
                 onLoad={(e) => e.currentTarget.classList.add('opacity-100')}
@@ -32,19 +32,6 @@ const OnboardingContent = () => {
             <div className="absolute right-1/4 top-1/2 transform -translate-y-1/4">
               <div className="w-20 h-20 rounded-full border-2 border-app-blue animate-pulse-subtle"></div>
               <ChevronRight className="absolute -right-10 top-1/2 transform -translate-y-1/2 text-app-blue w-8 h-8 animate-arrow" />
-            </div>
-          </div>
-          
-          {/* Additional image component in the middle */}
-          <div className="w-full max-w-md mx-auto mb-8">
-            <div className="aspect-square bg-app-gray rounded-md overflow-hidden">
-              <img 
-                src="/lovable-uploads/0bfe73c8-ec24-470f-9127-cce9ac8a83da.png" 
-                alt="Shopify screenshot" 
-                className="w-full h-full object-cover transition-opacity duration-300"
-                onLoad={(e) => e.currentTarget.classList.add('opacity-100')}
-                style={{ opacity: 0 }}
-              />
             </div>
           </div>
           
