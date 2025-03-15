@@ -1,9 +1,12 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import ActionButton from './ActionButton';
+import ImageUploader from './ImageUploader';
 
 const OnboardingContent = () => {
+  const [mainImage, setMainImage] = useState<string>('/lovable-uploads/17c78ebc-431d-42f4-a7c8-563f0f7baed9.png');
+  
   return (
     <div className="max-w-3xl mx-auto w-full py-12 px-6 animate-fade-in-up opacity-0" style={{ animationDelay: '0.2s' }}>
       <h1 className="text-3xl font-semibold text-center text-app-text mb-10">
@@ -16,17 +19,13 @@ const OnboardingContent = () => {
         </p>
         
         <div className="relative max-w-xl mx-auto">
-          {/* Instruction image with circular highlight */}
+          {/* Main uploadable image with circular highlight */}
           <div className="relative mb-8">
-            <div className="aspect-video bg-app-gray rounded-md overflow-hidden">
-              <img 
-                src="/lovable-uploads/17c78ebc-431d-42f4-a7c8-563f0f7baed9.png" 
-                alt="Settings screenshot" 
-                className="w-full object-cover transition-opacity duration-300"
-                onLoad={(e) => e.currentTarget.classList.add('opacity-100')}
-                style={{ opacity: 0 }}
-              />
-            </div>
+            <ImageUploader 
+              defaultImage={mainImage}
+              altText="Settings screenshot"
+              onImageChange={setMainImage}
+            />
             
             {/* Blue circle highlight and arrow */}
             <div className="absolute right-1/4 top-1/2 transform -translate-y-1/4">
