@@ -35,6 +35,19 @@ const OnboardingContent = () => {
             </div>
           </div>
           
+          {/* Additional image component in the middle */}
+          <div className="w-full max-w-md mx-auto mb-8">
+            <div className="aspect-square bg-app-gray rounded-md overflow-hidden">
+              <img 
+                src="/lovable-uploads/0bfe73c8-ec24-470f-9127-cce9ac8a83da.png" 
+                alt="Shopify screenshot" 
+                className="w-full h-full object-cover transition-opacity duration-300"
+                onLoad={(e) => e.currentTarget.classList.add('opacity-100')}
+                style={{ opacity: 0 }}
+              />
+            </div>
+          </div>
+          
           {/* Action button */}
           <div className="flex justify-center mt-8">
             <ActionButton 
